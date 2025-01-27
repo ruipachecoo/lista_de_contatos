@@ -23,7 +23,7 @@ Execute os comandos a seguir:
 
 2. **Acessar a aplicação:**
 
-   Acesse [http://localhost:8080](http://localhost:8080) ou [http://0.0.0.0:8080](http://0.0.0.0:8080) e$m seu navegador.
+   Acesse [http://localhost:8080](http://localhost:8080) ou [http://0.0.0.0:8080](http://0.0.0.0:8080) em seu navegador.
 
 3. **Encerrar os containers:**
 

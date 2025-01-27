@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Mapeia o Apache para a porta 8080 no host
+    user: www-data # Define o usuário padrão dentro do container
+    volumes:
+      - ./public:/var/www/html/public:ro # Monta o diretório público como somente leitura
+      - ./config:/var/www/html/config:ro # Monta o diretório de configuração como somente leitura
+      - ./routes:/var/www/html/routes:ro # Monta as rotas como somente leitura
+      - ./logs/apache2:/var/log/apache2:rw # Monta o diretório para logs do Apache2, com leitura e
+                                           # escrita
+      - ./logs:/var/log:rw # Monta o diretório para logs do PHP, com leitura e escrita
+      - ./php.ini:/usr/local/etc/php/php.ini:ro # Monta o arquivo de configuração do PHP
+
+    depends_on:
+      - db # Garante que o banco de dados será inicializado antes da aplicação
+    environment: # Variáveis de ambiente para o PHP
+      MYSQL_HOST: db
+      MYSQL_DATABASE: contact_list
+      MYSQL_USER: contact_user
+      MYSQL_PASSWORD: secure_password
+
+  db:
+    image: mariadb:10.6 # Usa a imagem oficial do MariaDB
+    container_name: contact_list_db # Nome do container
+    ports:
+      - "3306:3306" # Mapeia a porta padrão do MariaDB
+    environment: # Variáveis de ambiente para inicializar o MariaDB
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: contact_list
+      MYSQL_USER: contact_user
+      MYSQL_PASSWORD: secure_password
+    volumes:
+      - db_data:/var/lib/mysql # Volume persistente para o banco de dados
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro # Script de inicialização do banco
+
+volumes:
+  db_data: # Define um volume persistente para o banco de dados
+

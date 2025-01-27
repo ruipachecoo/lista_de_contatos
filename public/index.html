@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configurações básicas do documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+
+    <!-- Link para o arquivo de estilos externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Contêiner principal da aplicação -->
+    <div class="container">
+        <!-- Cabeçalho principal -->
+        <h1>Lista de Contatos</h1>
+
+        <!-- Formulário para adicionar pessoas e contatos -->
+        <form id="add-person-form">
+            <!-- Campo de entrada para o nome da pessoa -->
+            <input type="text" id="person-name" placeholder="Nome" required>
+
+            <!-- Contêiner para campos de contato -->
+            <div id="contact-fields">
+                <!-- Entrada para o tipo de contato (ex: WhatsApp, Email) -->
+                <input type="text" id="contact-method" placeholder="Meio de Contato">
+                <!-- Entrada para o valor do contato (ex: número, email) -->
+                <input type="text" id="contact-info" placeholder="Informação de Contato">
+                <!-- Entrada para notas adicionais -->
+                <input type="text" id="contact-notes" placeholder="Notas">
+            </div>
+
+            <!-- Botão para adicionar a pessoa e os contatos -->
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <!-- Contêiner para exibição da lista de pessoas e contatos -->
+        <div id="people-container"></div>
+    </div>
+
+    <!-- Inclusão do script para manipulação da lista de contatos -->
+    <script src="script.js"></script>
+</body>
+</html>
+

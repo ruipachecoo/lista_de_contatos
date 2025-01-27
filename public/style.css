@@ -1,0 +1,147 @@
+/* Estilos globais */
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho principal */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Formulário de adição */
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 40px;
+}
+
+/* Botão do formulário */
+form button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Efeito hover no botão */
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Lista de contatos */
+/* Contêiner da lista de pessoas */
+#people-container {
+    margin-top: 20px;
+}
+
+/* Estilo de cada pessoa */
+.person {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Nome da pessoa */
+.person h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Lista de contatos */
+.contact-list {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Cada contato */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Remove a borda do último contato */
+.contact:last-child {
+    border-bottom: none;
+}
+
+/* Informações do contato */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Botões de ação */
+/* Botões gerais */
+button.edit, button.delete {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Botão Editar */
+button.edit {
+    background-color: #28a745;
+    margin-right: 4px;
+}
+
+/* Efeito hover no botão Editar */
+button.edit:hover {
+    background-color: #218838;
+}
+
+/* Botão Excluir */
+button.delete {
+    background-color: #dc3545;
+    margin-left: 4px;
+}
+
+/* Efeito hover no botão Excluir */
+button.delete:hover {
+    background-color: #c82333;
+}
+

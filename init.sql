@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS contact_list;
+
+USE contact_list;
+
+CREATE TABLE IF NOT EXISTS pessoas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS contatos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    pessoa_id INT NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    valor VARCHAR(255) NOT NULL,
+    notas TEXT,
+    FOREIGN KEY (pessoa_id) REFERENCES pessoas(id) ON DELETE CASCADE
+);
+

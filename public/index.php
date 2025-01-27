@@ -1,7 +1,7 @@
 <?php
 
 // Inclui a configuração do banco de dados
-require '../config/db.php';
+require '/var/www/html/config/db.php';
 
 // Define o cabeçalho padrão como JSON para as respostas da API
 header('Content-Type: application/json');

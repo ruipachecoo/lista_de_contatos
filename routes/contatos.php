@@ -1,7 +1,7 @@
 <?php
 
 // Inclui a configuração do banco de dados
-require '../config/db.php';
+require '/var/www/html/config/db.php';
 
 // Define o tipo de conteúdo da resposta como JSON
 header('Content-Type: application/json');
